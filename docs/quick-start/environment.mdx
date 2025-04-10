@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+description: How to set up your development environment for ETH Mobile.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Environment
+
+Now that our installation is complete, let's configure the development environment for ETH Mobile.
+
+### 1. Connect your device to your computer via WIFI-HOTSPOT
+
+### 2. **Initialize a Local Blockchain**:
+
+In the first terminal, run a local network from the project root folder:
+
+```
+yarn chain
+```
+
+This command starts a local Ethereum network hosted on your local IP address. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
+
+Alternatively, you can use [Ganache](https://archive.trufflesuite.com/ganache/) to persist the blockchain state during development
+
+### 3. **Deploy Your Smart Contract**:
+
+In the second terminal, deploy the test contract:
+
+```
+yarn deploy
+```
+
+This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+
+### 4. **Configure the local provider**:
+
+Set the `ALCHEMY_KEY` and `localhost.provider`(port **8545**) variables in `packages/reactnative/ethmobile.config.ts`
+
+#### To determine your local IP address:
+
+#### Mac:
+
+```
+ipconfig getifaddr en0
+```
+
+#### Windows:
+
+```
+ipconfig
+```
+
+### 5. Connect your device via USB or Run an emulator
+
+### 6. Launch your React Native Application:
+
+#### Android:
+
+```
+yarn android
+```
+
+#### IOS:
+
+```
+yarn ios
+```
+
+### 7. Import an account from your local blockchain into your wallet to have funds for testing
+
+## What's Next:
+
+- Interact with your smart contract in the `DebugContracts` tab.
+- Configure your supported networks in `packages/reactnative/ethmobile.config.ts`.
+- Run smart contract test with `yarn hardhat:test`
+- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
+- Edit your frontend in `packages/reactnative/src/screens`
+- Edit your deployment scripts in `packages/hardhat/deploy`
