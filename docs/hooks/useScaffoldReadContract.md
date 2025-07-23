@@ -24,7 +24,7 @@ This example retrieves the data returned by the `userGreetingCounter` function o
 | **functionName** | `string`    | Yes      | Name of the function to call.                                                                                       |
 | **args**         | `unknown[]` | No       | Array of arguments to pass to the function (if accepts any). Types are inferred from contract's function parameters |
 | **enable**       | `boolean`   | No       | Fetch data on mount                                                                                                 |
-| **watch**        | `boolean`   | No       | Refetch data on each block mine                                                                                     |
+| **watch**        | `boolean`   | No       | If set to true, the data will be refetched on each block mine (default: false).                                     |
 
 ## Return Values
 

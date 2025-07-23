@@ -14,10 +14,10 @@ const { balance } = useBalance({
 
 ## Configuration
 
-| Parameter   | Type      | Required | Description                |
-| :---------- | :-------- | :------- | -------------------------- |
-| **address** | `string`  | Yes      | Address to read from.      |
-| **watch**   | `boolean` | No       | Refetch on each block mine |
+| Parameter   | Type      | Required | Description                                                                        |
+| :---------- | :-------- | :------- | ---------------------------------------------------------------------------------- |
+| **address** | `string`  | Yes      | Address to read from.                                                              |
+| **watch**   | `boolean` | No       | If set to true, the balance will be refetched on each block mine (default: false). |
 
 ## Return Values
 

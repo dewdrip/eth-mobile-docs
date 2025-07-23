@@ -26,7 +26,7 @@ This example retrieves the data returned by the `userGreetingCounter` function o
 | **functionName** | `string`    | No       | Name of the function to call.                                                                                       |
 | **args**         | `unknown[]` | No       | Array of arguments to pass to the function (if accepts any). Types are inferred from contract's function parameters |
 | **enabled**      | `boolean`   | No       | Should fetch data onMount. (default: true)                                                                          |
-| **watch**        | `boolean`   | No       | Refetch data on each block mine                                                                                     |
+| **watch**        | `boolean`   | No       | If set to true, the data will be refetched on each block mine (default: false).                                     |
 | **onError**      | `function`  | No       | Function to handle errors.                                                                                          |
 
 ## Return Values
