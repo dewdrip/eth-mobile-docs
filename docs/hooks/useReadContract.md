@@ -1,14 +1,15 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# useScaffoldReadContract
+# useReadContract
 
-Use this hook to read public variables and get data from read-only functions of your smart contract.
+Use this hook to read public variables and get data from read-only functions of any contract.
 
 ```ts
-const { data: totalCounter } = useScaffoldReadContract({
-  contractName: "YourContract",
+const { data: totalCounter } = useReadContract({
+  abi: [YourContractABI],
+  address: "0xabca6bf26964af9f7eed9e03e53415d37aa90123",
   functionName: "userGreetingCounter",
   args: ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"],
 });
@@ -20,11 +21,13 @@ This example retrieves the data returned by the `userGreetingCounter` function o
 
 | Parameter        | Type        | Required | Description                                                                                                         |
 | :--------------- | :---------- | :------- | ------------------------------------------------------------------------------------------------------------------- |
-| **contractName** | `string`    | Yes      | Name of the contract to read from.                                                                                  |
-| **functionName** | `string`    | Yes      | Name of the function to call.                                                                                       |
+| **abi**          | `object[]`  | No       | ABI of the contract to read from.                                                                                   |
+| **address**      | `string`    | No       | Address of contract to read from.                                                                                   |
+| **functionName** | `string`    | No       | Name of the function to call.                                                                                       |
 | **args**         | `unknown[]` | No       | Array of arguments to pass to the function (if accepts any). Types are inferred from contract's function parameters |
-| **enable**       | `boolean`   | No       | Fetch data on mount                                                                                                 |
+| **enabled**      | `boolean`   | No       | Should fetch data onMount. (default: true)                                                                          |
 | **watch**        | `boolean`   | No       | Refetch data on each block mine                                                                                     |
+| **onError**      | `function`  | No       | Function to handle errors.                                                                                          |
 
 ## Return Values
 

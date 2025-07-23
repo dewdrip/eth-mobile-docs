@@ -1,14 +1,15 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-# useScaffoldWriteContract
+# useWriteContract
 
-Use this hook to send a transaction to your smart contract to write data or perform an action.
+Use this hook to send a transaction to any smart contract to write data or perform an action.
 
 ```ts
-const { write: writeYourContractAsync } = useScaffoldWriteContract({
-  contractName: "YourContract",
+const { writeYourContractAsync } = useWriteContract({
+  abi: [YourContractABI],
+  address: "0xabca6bf26964af9f7eed9e03e53415d37aa90123",
 });
 ```
 
@@ -16,11 +17,12 @@ The following configuration options can be passed to the hook:
 
 ## Configuration
 
-| Parameter              | Type     | Required | Description                                             |
-| :--------------------- | :------- | :------- | ------------------------------------------------------- |
-| **contractName**       | `string` | Yes      | Name of the contract to write to.                       |
-| **blockConfirmations** | `number` | No       | Number of block confirmations to wait for (default: 1). |
-| **gasLimit**           | `bigint` | No       | Transaction gas limit.                                  |
+| Parameter              | Type       | Required | Description                                             |
+| :--------------------- | :--------- | :------- | ------------------------------------------------------- |
+| **abi**                | `object[]` | Yes      | ABI of the contract to read from.                       |
+| **address**            | `string`   | Yes      | Address of contract to read from.                       |
+| **blockConfirmations** | `number`   | No       | Number of block confirmations to wait for (default: 1). |
+| **gasLimit**           | `bigint`   | No       | Transaction gas limit.                                  |
 
 To send the transaction, you can call the `writeYourContractAsync` function returned by the hook. Here's an example usage:
 
