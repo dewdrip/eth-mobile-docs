@@ -22,9 +22,10 @@ import { Address } from "~~/components/eth-mobile";
 
 ## Props
 
-| Prop                          | Type        | Default Value | Description                                                                  |
-| ----------------------------- | ----------- | ------------- | ---------------------------------------------------------------------------- |
-| **address**                   | `string`    | `undefined`   | Address in `0x___` format, it will resolve its ENS if it has one associated. |
-| **containerStyle** (optional) | `ViewStyle` | `undefined`   | Style the component container.                                               |
-| **textStyle** (optional)      | `TextStyle` | `undefined`   | Style the address.                                                           |
-| **iconStyle** (optional)      | `TextStyle` | `undefined`   | Style the copy icon.                                                         |
+| Prop               | Type        | Default Value | Required | Description                                                                  |
+| ------------------ | ----------- | ------------- | -------- | ---------------------------------------------------------------------------- |
+| **address**        | `string`    | `undefined`   | Yes      | Address in `0x___` format, it will resolve its ENS if it has one associated. |
+| **containerStyle** | `ViewStyle` | `undefined`   | No       | Style the component container.                                               |
+| **textStyle**      | `TextStyle` | `undefined`   | No       | Style the address.                                                           |
+| **iconStyle**      | `TextStyle` | `undefined`   | No       | Style the copy icon.                                                         |
+| **copyable**       | `boolean`   | `true`        | No       | if set to true, an icon will be displayed to copy the address.               |
