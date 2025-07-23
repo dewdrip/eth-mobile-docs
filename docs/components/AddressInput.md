@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Display an Ethereum address input that shows a blockie image for each address.
 
-![AddressInput Example](/img/addressInput.gif)
+![AddressInput Example](/img/AddressInput.png)
 
 ## Import
 
