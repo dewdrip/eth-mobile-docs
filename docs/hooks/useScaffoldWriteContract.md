@@ -48,11 +48,11 @@ Below is the configuration for `writeYourContractAsync` function:
 
 ## Configuration
 
-| Parameter            | Type        | Required | Description                                                                                                          |
-| :------------------- | :---------- | :------- | -------------------------------------------------------------------------------------------------------------------- |
-| **functionName**     | `string`    | Yes      | Name of the function to be called.                                                                                   |
-| **args** (optional)  | `unknown[]` | No       | Array of arguments to pass to the function (if accepts any). Types are inferred from contract's function parameters. |
-| **value** (optional) | `bigint`    | No       | Value in ETH that will be sent with transaction (for payable functions only).                                        |
+| Parameter        | Type        | Required | Description                                                                                                          |
+| :--------------- | :---------- | :------- | -------------------------------------------------------------------------------------------------------------------- |
+| **functionName** | `string`    | Yes      | Name of the function to be called.                                                                                   |
+| **args**         | `unknown[]` | No       | Array of arguments to pass to the function (if accepts any). Types are inferred from contract's function parameters. |
+| **value**        | `bigint`    | No       | Value in ETH that will be sent with transaction (for payable functions only).                                        |
 
 ## Return Values
 
