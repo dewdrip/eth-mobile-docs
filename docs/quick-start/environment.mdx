@@ -10,7 +10,7 @@ import TabItem from "@theme/TabItem";
 
 Now that our installation is complete, let's configure the development environment for ETH Mobile.
 
-### 1. Connect your device to your computer via WIFI-HOTSPOT
+### 1. Your device/simulator and computer must be connected to the same WIFI.
 
 ### 2. **Initialize a Local Blockchain**:
 
@@ -34,47 +34,35 @@ yarn deploy
 
 This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
 
-### 4. **Configure the local provider**:
-
-Set the `ALCHEMY_KEY` and `localhost.provider`(port **8545**) variables in `packages/reactnative/ethmobile.config.ts`
-
-#### To determine your local IP address:
-
-#### Mac:
+### 4. **Configure the local network provider**:
 
 ```
-ipconfig getifaddr en0
+yarn configure-network
 ```
 
-#### Windows:
+This command sets your local IP address as your `hardhat.provider` in `ethmobile.config.ts`. It uses the script located in `packages/expo/utils/eth-mobile/configureLocalNetwork.ts`
+
+### 5. Prebuild native modules:
 
 ```
-ipconfig
+yarn prebuild
 ```
 
-### 5. Connect your device via USB or Run an emulator
-
-### 6. Launch your React Native Application:
-
-#### Android:
+### 6. Run your app:
 
 ```
 yarn android
 ```
 
-#### IOS:
-
 ```
 yarn ios
 ```
 
-### 7. Import an account from your local blockchain into your wallet to have funds for testing
-
 ## What's Next:
 
-- Interact with your smart contract in the `DebugContracts` tab.
-- Configure your supported networks in `packages/reactnative/ethmobile.config.ts`.
+- Interact with your smart contract in the `debugContracts` screen.
+- Configure your supported networks in `ethmobile.config.ts`.
 - Run smart contract test with `yarn hardhat:test`
 - Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend in `packages/reactnative/src/screens`
 - Edit your deployment scripts in `packages/hardhat/deploy`
+- Edit your frontend in `packages/expo/app`
