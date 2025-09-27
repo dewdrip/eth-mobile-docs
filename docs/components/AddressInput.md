@@ -26,14 +26,15 @@ const [address, setAddress] = useState("");
 
 ## Props
 
-| Prop               | Type        | Default Value | Required | Description                                                                  |
-| ------------------ | ----------- | ------------- | -------- | ---------------------------------------------------------------------------- |
-| **value**          | `string`    | `undefined`   | Yes      | An Ethereum address in (`0x___` format) or an ENS domain.                    |
-| **onChange**       | `function`  | `undefined`   | Yes      | A callback invoked when the data in the address input changes.               |
-| **placeholder**    | `string`    | `undefined`   | No       | The string that will be rendered before address input has been entered.      |
-| **onSubmit**       | `function`  | `undefined`   | No       | A callback function invoked when the data in the address input is submitted. |
-| **containerStyle** | `ViewStyle` | `undefined`   | No       | A style object for the wrapper.                                              |
-| **inputStyle**     | `TextStyle` | `undefined`   | No       | A style object for the container.                                            |
-| **outlineStyle**   | `TextStyle` | `undefined`   | No       | A style object for the outlined wrapper.                                     |
-| **contentStyle**   | `TextStyle` | `undefined`   | No       | A style object for the content.                                              |
-| **scan**           | `boolean`   | `undefined`   | No       | If set to true, an icon will be displayed to scan addresses.                 |
+| Prop                        | Type                      | Default Value | Required | Description                                                                  |
+| --------------------------- | ------------------------- | ------------- | -------- | ---------------------------------------------------------------------------- |
+| **value**                   | `string`                  | `undefined`   | Yes      | An Ethereum address in (`0x___` format) or an ENS domain.                    |
+| **placeholder**             | `string`                  | `undefined`   | No       | The string that will be rendered before address input has been entered.      |
+| **error**                   | `string`                  | `undefined`   | No       | Error message to display below the input.                                    |
+| **onChange**                | `(value: string) => void` | `undefined`   | Yes      | A callback invoked when the data in the address input changes.               |
+| **onSubmit**                | `() => void`              | `undefined`   | No       | A callback function invoked when the data in the address input is submitted. |
+| **containerClassName**      | `string`                  | `undefined`   | No       | Tailwind CSS class name for the main container wrapper.                      |
+| **inputContainerClassName** | `string`                  | `undefined`   | No       | Tailwind CSS class name for the input container.                             |
+| **inputClassName**          | `string`                  | `undefined`   | No       | Tailwind CSS class name for the input element.                               |
+| **errorClassName**          | `string`                  | `undefined`   | No       | Tailwind CSS class name for the error message display.                       |
+| **scan**                    | `boolean`                 | `undefined`   | No       | If set to true, an icon will be displayed to scan addresses.                 |
