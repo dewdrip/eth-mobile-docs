@@ -11,7 +11,7 @@ Display an Ethereum address input that shows a blockie image for each address.
 ## Import
 
 ```tsx
-import { AddressInput } from "~~/components/eth-mobile";
+import { AddressInput } from "@/components/eth-mobile";
 ```
 
 ## Usage

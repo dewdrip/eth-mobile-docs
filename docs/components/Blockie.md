@@ -11,7 +11,7 @@ Show a blockie (bar code profile icon) component for a given public address.
 ## Import
 
 ```tsx
-import { Blockie } from "~~/components/eth-mobile";
+import { Blockie } from "@/components/eth-mobile";
 ```
 
 ## Usage

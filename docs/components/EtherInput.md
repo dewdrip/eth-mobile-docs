@@ -11,7 +11,7 @@ A component that allows users to input an amount of ETH with real-time ETH/USD c
 ## Import
 
 ```tsx
-import { EtherInput } from "~~/components/eth-mobile";
+import { EtherInput } from "@/components/eth-mobile";
 ```
 
 ## Usage

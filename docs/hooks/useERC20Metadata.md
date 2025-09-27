@@ -15,7 +15,7 @@ const { data, isLoading, error, getERC20Metadata } = useERC20Metadata({
 ## Usage
 
 ```tsx
-import { useERC20Metadata } from "~~/hooks/eth-mobile";
+import { useERC20Metadata } from "@/hooks/eth-mobile";
 
 function TokenInfo() {
   const { data, isLoading, error, getERC20Metadata } = useERC20Metadata({

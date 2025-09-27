@@ -11,7 +11,7 @@ Displays the balance of a given address in ether (ETH).
 ## Import
 
 ```tsx
-import { Balance } from "~~/components/eth-mobile";
+import { Balance } from "@/components/eth-mobile";
 ```
 
 ## Usage

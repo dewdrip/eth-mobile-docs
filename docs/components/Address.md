@@ -11,7 +11,7 @@ Display an address along with a utility icon to copy the address. A blockie imag
 ## Import
 
 ```tsx
-import { Address } from "~~/components/eth-mobile";
+import { Address } from "@/components/eth-mobile";
 ```
 
 ## Usage

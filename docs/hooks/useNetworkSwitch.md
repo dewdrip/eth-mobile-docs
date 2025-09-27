@@ -13,7 +13,7 @@ const { switchNetwork } = useNetworkSwitch();
 ## Usage
 
 ```tsx
-import { useNetworkSwitch } from "~~/hooks/eth-mobile";
+import { useNetworkSwitch } from "@/hooks/eth-mobile";
 
 function NetworkSwitcher() {
   const { switchNetwork } = useNetworkSwitch();

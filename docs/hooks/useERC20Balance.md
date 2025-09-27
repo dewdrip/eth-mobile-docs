@@ -17,7 +17,7 @@ const { balance, isLoading, error, getBalance } = useERC20Balance({
 ## Usage
 
 ```tsx
-import { useERC20Balance } from "~~/hooks/eth-mobile";
+import { useERC20Balance } from "@/hooks/eth-mobile";
 
 function TokenBalance() {
   const { balance, isLoading, error, getBalance } = useERC20Balance({

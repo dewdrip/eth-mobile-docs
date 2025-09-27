@@ -16,7 +16,7 @@ const { data, isLoading, error, getERC721Metadata } = useERC721Metadata({
 ## Usage
 
 ```tsx
-import { useERC721Metadata } from "~~/hooks/eth-mobile";
+import { useERC721Metadata } from "@/hooks/eth-mobile";
 
 function NFTInfo() {
   const { data, isLoading, error, getERC721Metadata } = useERC721Metadata({
