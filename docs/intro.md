@@ -3,11 +3,9 @@ sidebar_position: 1
 slug: /
 ---
 
-# ⚖️ Welcome to ETH Mobile
+# 📱 Welcome to ETH Mobile
 
 [ETH Mobile](https://github.com/dewdrip/eth-mobile) is an open-source toolkit for building decentralized applications (dApps) on Ethereum and other EVM-compatible blockchains. It simplifies mobile dApp development with fast, secure and customizable pre-built components to create, deploy and interact with smart contracts.
-
-[Watch me mint a Snowman NFT!☃️](https://youtu.be/CaJTnRtLOK8)
 
 ⚙️ **Tech Stack**: Built with React Native, Hardhat, Ethers, and TypeScript to streamline mobile dApp development.
 
