@@ -1,0 +1,220 @@
+---
+sidebar_position: 2
+toc_max_heading_level: 5
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Deploy Your Expo App
+
+This guide will walk you through setting up EAS (Expo Application Services) for deploying your Expo app to app stores and over-the-air updates.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- [An Expo account](https://expo.dev/signup)
+- [iOS Developer account](https://developer.apple.com/account/) (for App Store deployment)
+- [Google Play Console account](https://play.google.com/console) (for Google Play Store deployment)
+
+## 1. Login to Expo
+
+Authenticate with your Expo account using the yarn command:
+
+```bash
+yarn eas:login
+```
+
+This command will:
+
+- Install EAS CLI if not already installed
+- Authenticate with your Expo account
+- Securely store your credentials for future use
+
+## 2. Initialize EAS in Your Project
+
+Set up EAS for your project:
+
+```bash
+yarn eas:init
+```
+
+This command will:
+
+- Create a new project on your Expo account if one does not already exist, and link it
+- If the project already exists, link it to your Expo account
+
+> You can see your project ID in your `app.json` file at `extra.eas.projectId`
+
+## 3. Configure EAS Build
+
+Configure your build settings and credentials:
+
+```bash
+yarn build:configure
+```
+
+This command will:
+
+- Create an `eas.json` configuration file
+- Set up build profiles (development, preview, production)
+- Configure distribution settings for each platform
+
+## 4. Build Your App
+
+Now you can build your app for different platforms and environments:
+
+> **Note:** if you wish to run your app in a physical device, your device must be connected to the same WIFI
+
+### Android Builds
+
+#### Development Build
+
+```bash
+yarn build:android:dev
+```
+
+This command will:
+
+- Create a development build for Android
+- Include debugging tools and development features like **Hot reloading**
+- Generate an APK for internal testing
+- Use development signing certificates
+
+#### Preview Build
+
+```bash
+yarn build:android:preview
+```
+
+This command will:
+
+- Create a preview build for internal testing and QA
+- Generate an APK for easy sharing with testers
+- Use preview signing certificates
+- Optimize for testing without development overhead
+- Include production-like performance characteristics
+
+#### Production Build
+
+```bash
+yarn build:android:prod
+```
+
+This command will:
+
+- Create a production-ready build for Google Play Store
+- Generate an AAB (Android App Bundle) file
+- Use production signing certificates
+- Optimize for performance and size
+- Remove all debugging tools and development features
+
+### iOS Builds
+
+#### Development Build
+
+```bash
+yarn build:ios:dev
+```
+
+This command will:
+
+- Create a development build for iOS
+- Include debugging tools and development features like **Hot reloading**
+- Generate an IPA for internal testing
+- Use development provisioning profiles
+
+#### Preview Build
+
+```bash
+yarn build:ios:preview
+```
+
+This command will:
+
+- Create a preview build for TestFlight and internal testing
+- Generate an IPA ready for TestFlight upload
+- Use preview provisioning profiles
+- Optimize for testing without development overhead
+- Include production-like performance characteristics
+
+#### Production Build
+
+```bash
+yarn build:ios:prod
+```
+
+This command will:
+
+- Create a production-ready build for App Store
+- Generate an IPA file for App Store submission
+- Use production provisioning profiles and certificates
+- Optimize for performance and size
+- Remove all debugging tools and development features
+
+## 5. Submit to App Stores
+
+After building your app, you can submit it to the respective app stores:
+
+### Submit to Google Play Store
+
+```bash
+yarn submit:android
+```
+
+This command will:
+
+- Upload your production AAB file to Google Play Console
+- Submit the app for review (if configured)
+- Use your configured Google Play service account credentials
+- Automate the submission process to Google Play Console
+
+### Submit to Apple App Store
+
+```bash
+yarn submit:ios
+```
+
+This command will:
+
+- Upload your production IPA file to App Store Connect
+- Submit the app for review (if configured)
+- Use your configured Apple Developer credentials
+- Automate the submission process to App Store Connect
+
+## Quick Reference
+
+### Complete Workflow
+
+Here's the complete yarn command workflow for EAS deployment:
+
+```bash
+# 1. Login to Expo
+yarn eas:login
+
+# 2. Initialize EAS in your project
+yarn eas:init
+
+# 3. Configure build settings and credentials
+yarn build:configure
+
+# 4. Build for Android
+yarn build:android:dev      # Development build
+yarn build:android:preview  # Preview build
+yarn build:android:prod     # Production build
+
+# 5. Build for iOS
+yarn build:ios:dev          # Development build
+yarn build:ios:preview      # Preview build
+yarn build:ios:prod         # Production build
+
+# 6. Submit to app stores
+yarn submit:android         # Submit to Google Play Store
+yarn submit:ios             # Submit to Apple App Store
+```
+
+### Resources
+
+- [EAS Documentation](https://docs.expo.dev/build/introduction/)
+- [Expo Discord Community](https://discord.gg/expo)
